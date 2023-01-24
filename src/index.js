@@ -96,15 +96,14 @@ y.addEventListener("dblclick", () => {
   alert("BANA ULAŞAMAZSIN !");
 });
 
-// drag/drop  // TAMAMLANMADI
+// drag/drop
 
 const txt = document.querySelectorAll(".text-content")[0];
-
 const img = document.querySelectorAll(".img-content")[0];
 
 let draggedItem = null;
 
-const item = txt;
+const item = img;
 
 item.addEventListener("dragstart", function () {
   draggedItem = item;
@@ -116,11 +115,12 @@ item.addEventListener("dragstart", function () {
 item.addEventListener("dragend", function () {
   setTimeout(function () {
     draggedItem.style.display = "block";
+
     draggedItem = null;
   }, 0);
 });
 
-const list = img;
+const list = txt;
 
 list.addEventListener("dragover", function (e) {
   e.preventDefault();
